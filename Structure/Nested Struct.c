@@ -23,10 +23,3 @@ void main(){
         printf("ID :%d\n Name: %s \n Salary: %f\t %f\t %f",e[i].emp_id,e[i].name,e[i].s.pa_sal,e[i].s.base_sal,e[i].s.overtime);
     }
 }
-
-
-// 1 write larest of 3 usinf if logical and without any logical
-// 2 wap to chek vote using while do while and if
-// 3 wap to print n natural numbers wsing wjile and do while
-// 4 wap to print sum od even and odd using while and do while
-
