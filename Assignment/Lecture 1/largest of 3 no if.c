@@ -1,7 +1,5 @@
 // Program to find largest of 3 numbers without if else
-
 #include <stdio.h>
-#include <math.h>
 
 int main(){
     int a,b,c,d;

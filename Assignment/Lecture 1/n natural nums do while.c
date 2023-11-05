@@ -5,8 +5,8 @@ int main() {
     printf("Enter the value of n: ");
     scanf("%d", &n);
     printf("The first %d natural numbers are: ", n);
-    while (i < n+1) {
+    do{
         printf("%d ", i++);
-    }
+    } while (i < n+1);
     return 0;
 }
