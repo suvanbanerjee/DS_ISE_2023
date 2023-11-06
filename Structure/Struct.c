@@ -10,6 +10,7 @@ void main(){
     struct emp e[100];
     int n;
     printf("How manny employee to add ");
+    printf("How manny employee to add ");
     scanf("%d",&n);
     for (int i=0;i<n;i++){
         printf("Enter ID Name and Salary");
