@@ -1,0 +1,4 @@
+// 1 Write largest of 3 using if logical and without any logical
+// 2 Write a program to check vote using while, do while 
+// 3 Write a program to print n natural numbers using while and do while
+// 4 Write a program to print sum of even and odd numbers using while and do while
