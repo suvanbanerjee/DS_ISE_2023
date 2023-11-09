@@ -12,4 +12,3 @@ int main(){
     }
     printf("You are not elligible to vote\n");
     }
-}
