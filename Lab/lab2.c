@@ -8,35 +8,28 @@ void push() {
     int x;
     if (top == MAX_SIZE - 1) {
         printf("Stack overflow\n");
-        return;
-    }
+        return;}
     printf("Enter element: ");
     scanf("%d", &x);
-    top = top + 1;
-    s[top] = x;
+    s[++top] = x;
 }
 
-// Function to pop an element from the stack
 void pop() {
     if (top == -1) {
         printf("Stack underflow\n");
-        return;
-    }
-    printf("Popped element is %d\n", s[top]);
-    top = top - 1;
-}
+        return; }
+    printf("Popped element is %d\n", s[top--]);}
 
-// Function to display the elements of the stack
 void display() {
     int i;
     if (top == -1) {
         printf("Stack is empty\n");
-        return;
-    } else {
+        return;}
+        
+    else {
         printf("Contents of the stack: \n");
         for (i = 0; i <= top; i++) {
-            printf("%d ", s[i]);
-        }
+            printf("%d ", s[i]); }
         printf("\n");
     }
 }
