@@ -34,7 +34,8 @@ int main()
                 printf("Name of employee %d is %s\n", i + 1, emp[i].name);
                 printf("id of employee %d is %d\n", i + 1, emp[i].id);
                 printf("Salary of employee %d is %f\n", i + 1, emp[i].salary);
-            } printf("\n");
+            }
+            printf("\n");
             break;
         case 3:
 

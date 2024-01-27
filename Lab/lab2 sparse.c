@@ -4,7 +4,8 @@
 #define MROW 20
 #define MCOL 20
 
-int main() {
+int main()
+{
     int mat[MROW][MCOL], sparse[SROW][3];
     int i, j, nzero = 0, mr, mc, sr, s, elem;
 
@@ -14,10 +15,13 @@ int main() {
     scanf("%d", &mc);
 
     printf("Enter the matrix\n");
-    for (i = 1; i <= mr; i++) {
-        for (j = 1; j <= mc; j++) {
+    for (i = 1; i <= mr; i++)
+    {
+        for (j = 1; j <= mc; j++)
+        {
             scanf("%d", &mat[i][j]);
-            if (mat[i][j] != 0) {
+            if (mat[i][j] != 0)
+            {
                 nzero++;
             }
         }
@@ -29,9 +33,12 @@ int main() {
     sparse[1][3] = nzero;
     s = 2;
 
-    for (i = 1; i <= mr; i++) {
-        for (j = 1; j <= mc; j++) {
-            if (mat[i][j] != 0) {
+    for (i = 1; i <= mr; i++)
+    {
+        for (j = 1; j <= mc; j++)
+        {
+            if (mat[i][j] != 0)
+            {
                 sparse[s][1] = i;
                 sparse[s][2] = j;
                 sparse[s][3] = mat[i][j];
@@ -41,8 +48,10 @@ int main() {
     }
 
     printf("\nSparse matrix is \n");
-    for (i = 1; i <= sr; i++) {
-        for (j = 1; j <= 3; j++) {
+    for (i = 1; i <= sr; i++)
+    {
+        for (j = 1; j <= 3; j++)
+        {
             printf("%d ", sparse[i][j]);
         }
         printf("\n");
@@ -51,8 +60,10 @@ int main() {
     printf("Enter the element to be searched\n");
     scanf("%d", &elem);
 
-    for (i = 2; i < sr; i++) {
-        if (sparse[i][3] == elem) {
+    for (i = 2; i < sr; i++)
+    {
+        if (sparse[i][3] == elem)
+        {
             printf("Element found at (row,col)=(%d,%d)\n", sparse[i][1], sparse[i][2]);
             return 0;
         }

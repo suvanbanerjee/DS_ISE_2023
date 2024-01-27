@@ -4,16 +4,16 @@
 struct node
 {
     int info;
-    struct node* link;
+    struct node *link;
 };
 
-typedef struct node* NODE;
+typedef struct node *NODE;
 
 NODE getnode()
 {
     NODE x;
     x = (NODE)malloc(sizeof(struct node));
-    if(x == NULL)
+    if (x == NULL)
     {
         printf("out of memory");
         exit(0);
@@ -38,7 +38,7 @@ NODE push(NODE top, int item)
 NODE pop(NODE top)
 {
     NODE temp;
-    if(top == NULL)
+    if (top == NULL)
     {
         printf("Stack is empty\n");
         return top;
@@ -53,40 +53,45 @@ NODE pop(NODE top)
 void display(NODE top)
 {
     NODE temp = top;
-    if(top == NULL)
+    if (top == NULL)
     {
         printf("Stack is empty\n");
         return;
     }
-    while(temp != NULL)
+    while (temp != NULL)
     {
         printf("%d\t", temp->info);
         temp = temp->link;
     }
-        printf("\n");
+    printf("\n");
 }
 
 void main()
 {
     NODE top = NULL;
     int choice, item;
-    for(;;)
+    for (;;)
     {
         printf("1. PUSH\t2. POP\t3. DISPLAY\t4. EXIT\n");
         scanf("%d", &choice);
-        switch(choice)
+        switch (choice)
         {
-            case 1: printf("Enter the item:\t");
-                    scanf("%d", &item);
-                    top = push(top, item);
-                    break;
-            case 2: top = pop(top);
-                    break;
-            case 3: display(top);
-                    break;
-            case 4: exit(0);
-            default: printf("Invalid choice\n");
-                     break;
+        case 1:
+            printf("Enter the item:\t");
+            scanf("%d", &item);
+            top = push(top, item);
+            break;
+        case 2:
+            top = pop(top);
+            break;
+        case 3:
+            display(top);
+            break;
+        case 4:
+            exit(0);
+        default:
+            printf("Invalid choice\n");
+            break;
         }
     }
 }
